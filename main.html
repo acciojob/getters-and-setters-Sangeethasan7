@@ -1,16 +1,30 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Person, Student, Teacher</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
-
+    <h1>Person, Student, and Teacher</h1>
+    <div class="container">
+        <div class="person">
+            <h2>Person</h2>
+            <p>Name: <span id="personName"></span></p>
+            <p>Age: <span id="personAge"></span></p>
+        </div>
+        <div class="student">
+            <h2>Student</h2>
+            <p>Name: <span id="studentName"></span></p>
+            <button onclick="study()">Study</button>
+        </div>
+        <div class="teacher">
+            <h2>Teacher</h2>
+            <p>Name: <span id="teacherName"></span></p>
+            <button onclick="teach()">Teach</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
-
 </html>

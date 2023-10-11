@@ -19,27 +19,29 @@ class Person {
 
 class Student extends Person {
   study() {
-    console.log(`${this.name} is studying.`);
+    alert(`${this.name} is studying.`);
   }
 }
 
 class Teacher extends Person {
   teach() {
-    console.log(`${this.name} is teaching.`);
+    alert(`${this.name} is teaching.`);
   }
 }
 
-// Create a student and a teacher
-const student = new Student('Alice', 20);
-const teacher = new Teacher('Mr. Smith', 35);
+const person = new Person('John Doe', 30);
+const student = new Student('Alice Smith', 20);
+const teacher = new Teacher('Mr. Johnson', 40);
 
-console.log(student.name); // Accessing the name getter
-student.study(); // Calling the study method
+document.getElementById('personName').textContent = person.name;
+document.getElementById('personAge').textContent = person._age;
+document.getElementById('studentName').textContent = student.name;
+document.getElementById('teacherName').textContent = teacher.name;
 
-console.log(teacher.name); // Accessing the name getter
-teacher.teach(); // Calling the teach method
+function study() {
+  student.study();
+}
 
-// Example of setting age using the setter
-student.age = 21; // This will set the age to 21
-teacher.age = -5; // This will log "Age cannot be negative."
-
+function teach() {
+  teacher.teach();
+}
